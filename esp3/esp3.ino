@@ -1,17 +1,6 @@
 /*
- * ServerBoard — ESP 3 (ESP32 webserver + strip lights + 433 MHz RF transmitter)
  * ServerBoard — ESP 3 (ESP32 + WiFi + webserver + strips relay + 433 MHz RF receiver)
  *
- * What it does:
- *   1. Webserver — the "Home Control" dashboard (Cooler / Light / Strips).
- *   2. Strip lights — driven directly from STRIP_PIN (local relay).
- *   3. RF transmitter — for Cooler/Light it transmits the SAME 433 MHz codes
- *      as the physical remote, so ESP 2 (RFBoard, ESP8266) picks them up and
- *      forwards them over ESP-NOW to ESP 1 (RelayBoard). The dashboard and
- *      the remote are indistinguishable downstream — by design.
- *
- * State shown on the dashboard is tracked locally (optimistic): this board
- * assumes the command went through when it transmits the RF code.
  * New 2-board architecture (no ESP-NOW, no RF transmitter):
  *  - Drives the STRIP lights relay NATIVELY (boolean on/off).
  *  - Receives the 433 MHz physical remote:
