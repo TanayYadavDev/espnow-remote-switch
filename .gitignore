@@ -8,3 +8,8 @@ build/
 # Local secrets — never commit real credentials
 ServerBoard/config.h
 RelayBoard/config.h
+<<<<<<< HEAD
+=======
+esp1/config.h
+esp3/config.h
+>>>>>>> 379ce41 (ESP1/ESP3 sketches with confirmed pins and strips RF code)

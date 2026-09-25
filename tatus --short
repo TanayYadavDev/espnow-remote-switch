@@ -1,0 +1,8 @@
+[33m97da7c4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m ESP1/ESP3 sketches with confirmed pins and strips RF code
+[33m460c7e9[m Update MAC address comment in config.h
+[33mc24bf56[m Update .gitignore to ignore ServerBoard/config.h
+[33maf98ebb[m Revise README for 3 ESP8266 architecture
+[33ma4c3e85[m Add example configuration template for ServerBoard
+[33m20b444b[m Add ServerBoard functionality for home control
+[33m4e4cca4[m Add RFBoard configuration header file
+[33mda89b97[m Add RFBoard main logic for ESP-NOW communication
