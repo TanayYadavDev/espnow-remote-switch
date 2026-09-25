@@ -1,0 +1,9 @@
+# Arduino build artifacts
+*.elf
+*.hex
+*.bin
+*.map
+build/
+
+# Local secrets — never commit real credentials
+HomeController/config.h
