@@ -42,10 +42,14 @@ switches the relay → ESP 1 replies STATUS_REPLY → ESP 2 prints it.
 ## Hardware
 
 - 2× ESP8266 boards, e.g. NodeMCU (ESP 1 RelayBoard, ESP 2 RFBoard)
+- 1× ESP32 board, e.g. ESP32 DevKit (ESP 3 ServerBoard)
 - 1× 2-channel relay module (**active-low**) for ESP 1
 - 1× relay (or MOSFET) module for the strip lights on ESP 3
 - 1× 433 MHz RF receiver module + RF remote (ESP 2)
 - 1× 433 MHz RF transmitter module (ESP 3)
+
+**Board selection in Arduino IDE:** "NodeMCU 1.0 (ESP-12E Module)" for the two
+ESP8266 boards, "ESP32 Dev Module" for the ESP32.
 
 ## Setup
 
