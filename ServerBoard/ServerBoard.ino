@@ -1,27 +1,27 @@
 /*
- * ServerBoard — ESP 3 (ESP8266 webserver + strip lights + 433 MHz RF transmitter)
+ * ServerBoard — ESP 3 (ESP32 webserver + strip lights + 433 MHz RF transmitter)
  *
  * What it does:
  *   1. Webserver — the "Home Control" dashboard (Cooler / Light / Strips).
  *   2. Strip lights — driven directly from STRIP_PIN (local relay).
  *   3. RF transmitter — for Cooler/Light it transmits the SAME 433 MHz codes
- *      as the physical remote, so ESP 2 (RFBoard) picks them up and forwards
- *      them over ESP-NOW to ESP 1 (RelayBoard). The dashboard and the remote
- *      are indistinguishable downstream — by design.
+ *      as the physical remote, so ESP 2 (RFBoard, ESP8266) picks them up and
+ *      forwards them over ESP-NOW to ESP 1 (RelayBoard). The dashboard and
+ *      the remote are indistinguishable downstream — by design.
  *
  * State shown on the dashboard is tracked locally (optimistic): this board
  * assumes the command went through when it transmits the RF code.
  *
  * Setup: copy config.example.h to config.h, fill in WiFi + pins, flash, done.
- * Needs the RCSwitch library.
+ * Board: "ESP32 Dev Module". Needs the RCSwitch library.
  */
 
-#include <ESP8266WiFi.h>
-#include <ESP8266WebServer.h>
+#include <WiFi.h>
+#include <WebServer.h>
 #include <RCSwitch.h>
 #include "config.h"
 
-ESP8266WebServer server(80);
+WebServer server(80);
 RCSwitch rf = RCSwitch();
 
 // Dashboard state (optimistic — updated when we transmit).
