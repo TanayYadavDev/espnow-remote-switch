@@ -41,7 +41,7 @@ switches the relay → ESP 1 replies STATUS_REPLY → ESP 2 prints it.
 
 ## Hardware
 
-- 3× ESP8266 boards (e.g. NodeMCU / Wemos D1 mini)
+- 2× ESP8266 boards, e.g. NodeMCU (ESP 1 RelayBoard, ESP 2 RFBoard)
 - 1× 2-channel relay module (**active-low**) for ESP 1
 - 1× relay (or MOSFET) module for the strip lights on ESP 3
 - 1× 433 MHz RF receiver module + RF remote (ESP 2)
@@ -56,7 +56,7 @@ switches the relay → ESP 1 replies STATUS_REPLY → ESP 2 prints it.
    - `RelayBoard/config.h` — put ESP 2's MAC in `CONTROLLER_MAC`.
    - `ServerBoard/config.h` — copy from `config.example.h`; fill `WIFI_SSID`/`WIFI_PASS`
      (git-ignored — your password never leaves your machine), `RF_TX_PIN`,
-     `STRIP_PIN`, and confirm the RF code mapping.
+     `STRIP_PIN` (ESP32 GPIO numbers), and confirm the RF code mapping.
 3. **Flash**: `RelayBoard` on ESP 1, `RFBoard` on ESP 2, `ServerBoard` on ESP 3.
 4. Open the IP printed by ESP 3's serial monitor — the **Home Control** dashboard
    appears (Cooler / Light / Strips cards with ON/OFF buttons, auto-refreshing).
