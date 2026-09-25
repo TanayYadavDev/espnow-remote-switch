@@ -7,3 +7,4 @@ build/
 
 # Local secrets — never commit real credentials
 ServerBoard/config.h
+RelayBoard/config.h
