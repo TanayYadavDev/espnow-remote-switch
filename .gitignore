@@ -6,4 +6,4 @@
 build/
 
 # Local secrets — never commit real credentials
-HomeController/config.h
+ServerBoard/config.h
